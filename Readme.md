@@ -1,6 +1,7 @@
+[![](https://images.microbadger.com/badges/version/trainemize/nuget-exe.svg)](https://microbadger.com/images/trainemize/nuget-exe "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/trainemize/nuget-exe.svg)](https://microbadger.com/images/trainemize/nuget-exe "Get your own image badge on microbadger.com")
 # Nuget.exe Docker Container
 
-nuget-exe is a docker container based on devian:stable-slim, which allows to use the nuget executable (nuget.exe) as staged build layer.
+nuget-exe is a docker container based on [debian:stable-slim](https://hub.docker.com/_/debian/), which allows you to use the nuget executable (nuget.exe) as staged build layer.
 
 ## Usage
 
@@ -36,7 +37,10 @@ RUN ...
 # Build your app here
 ```
 
-Build command: `docker build -t myapp --build-arg NUGET_FEED_NAME=my-cool-private-feed-name --build-arg NUGET_USER=foo --build-arg NUGET_PW=bar .`
+Build command: 
+```sh
+$ docker build -t myapp --build-arg NUGET_FEED_NAME=my-cool-private-feed-name --build-arg NUGET_USER=foo --build-arg NUGET_PW=bar .
+```
 
 ## Build image
 
